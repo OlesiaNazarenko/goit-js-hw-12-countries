@@ -50,10 +50,10 @@ function fetchCountries(searchQuery) {
             }
             if (data.length > 10) {
     
-                return error({ text: 'Too many countries found. Please enter more specific value!' })
+                return error({ text: 'Too many matches found. Please enter a more specific query!' })
             }
             
-            if (data.length > 1) {
+            if (data.length >=2 && data.length < 10 ) {
                 card.innerHTML = listTmp(data)
             }
         })
