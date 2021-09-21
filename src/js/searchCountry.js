@@ -1,7 +1,7 @@
 import  API from './fetchCountries';
 
-import countryTmp from './templates/countryTmp';
-import listTmp from './templates/list.hbs';
+import countryTmp from '../templates/countryTmp';
+import listTmp from '../templates/list.hbs';
 
 import { alert } from '@pnotify/core/dist/PNotify.js'
 import '@pnotify/core/dist/PNotify.css'
