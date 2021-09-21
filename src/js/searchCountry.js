@@ -3,7 +3,7 @@ import  API from './fetchCountries';
 import countryTmp from './templates/countryTmp';
 import listTmp from './templates/list.hbs';
 
-import { alert, error } from '@pnotify/core/dist/PNotify.js'
+import { alert } from '@pnotify/core/dist/PNotify.js'
 import '@pnotify/core/dist/PNotify.css'
 import '@pnotify/core/dist/BrightTheme.css'
 import { defaults } from '@pnotify/core'
@@ -24,9 +24,6 @@ function renderCountryCard(data) {
     card.insertAdjacentHTML('beforeend', markup);
 }
 
-function onFetchError(err) {
-  error({ text: 'You entered the wrong country name. Nothing found. Please, try again' })
-}
 function checkContries(data) {
             if (data.length === 1) {
                 renderCountryCard(data)
@@ -42,7 +39,7 @@ function onSearch(e) {
     clearContainer();
     const searchQuery = e.target.value;
     e.preventDefault();
-    API.fetchCountries(searchQuery).then(checkContries).catch(onFetchError);
+    API.fetchCountries(searchQuery).then(checkContries);
    }
 
 inputCountry.addEventListener('input', debounce(onSearch, 500));
