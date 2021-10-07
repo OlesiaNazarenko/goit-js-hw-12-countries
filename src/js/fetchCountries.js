@@ -6,7 +6,7 @@ defaults.delay = '3000'
 defaults.width = '400px'
 defaults.minHeight = '56px'
 
-const BASE_URL = 'https://restcountries.eu/rest/v2/name';
+const BASE_URL = 'https://restcountries.com/v2/name';
 
  function fetchCountries(searchQuery) {
     return fetch(`${BASE_URL}/${searchQuery}`)
