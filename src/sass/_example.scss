@@ -1,20 +1,46 @@
 body {
-  height: 240px;
-  // Путь к изображениям из SASS-файла всегда такой, как из папки css
-  background: url('https://forvardplast.ru/800/600/https/catherineasquithgallery.com/uploads/posts/2021-02/1614509615_130-p-fon-belaya-kirpichnaya-stena-176.jpg');
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: #2f4f4f;
+  background-position: top right;
+  backdrop-filter: blur(8px);
+  text-align: center;
 }
 .wrap {
-  background: rgba(255, 255, 255, 0.2);
   width: 700px;
-  height: 500px;
-  margin: 5% auto;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin: 0 auto;
   padding: 20px;
+  color: black;
+}
+.wrapTitle {
+  padding: 20px 0 15px 0;
+  margin: 0;
+  font-size: 44px;
+  font-weight: 800;
+  background-color: red;
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 26.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #9ba252 50%,
+    #437272 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 .countryNameInput {
   padding: 10px;
@@ -27,6 +53,12 @@ body {
 }
 .card {
   display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: left;
+}
+.card ul {
+  padding-left: 20px;
 }
 .img_flag {
   margin: 20px 0 0 40px;
